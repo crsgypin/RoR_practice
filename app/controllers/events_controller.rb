@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 		@events = Event.all
 	end
 
+#create
 	def new
 		@event = Event.new
 	end
@@ -14,10 +15,12 @@ class EventsController < ApplicationController
 		redirect_to :action => :index
 	end
 
+#read
 	def show
 		@event = Event.find(params[:id])
 	end
 
+#update
 	def edit
 		@event = Event.find(params[:id])
 	end
@@ -28,6 +31,19 @@ class EventsController < ApplicationController
 
 		redirect_to :action => :show, :id => @event
 	end
+
+#delete
+	def destroy
+		@event = Event.find(params[:id])
+	end
+
+	def delete
+		@event = Event.find(params[:id])
+		@event.destroy
+
+		redirect_to :action => :index
+	end
+
 
 
 private 
