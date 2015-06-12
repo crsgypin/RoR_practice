@@ -18,6 +18,7 @@
 			<%= link_to ' (JSON)', event_path(event, :format => :json) %>
 			<%= link_to 'Edit', edit_event_path(event) %>
 			<%= link_to 'Delete', event_path(event), :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+			<%= link_to 'attendees', event_attendees_path(event) %>
 		</td>
 	</tr>
 	<% end %>
