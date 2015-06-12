@@ -1,0 +1,18 @@
+
+<% if @event.name != "" %>
+	<h1><%= link_to @event.name, events_path %></h1>
+<% else %>
+	<h1><%= link_to "N/A", events_path %></h1>
+<% end %>
+
+<% if @event.location %>
+
+	<p><%= @event.location.name %> </p>
+	<p><%= link_to "edit", edit_event_location_path(@event) %></p>
+	<p><%= link_to "destroy", event_location_path, :method=>:delete%></p>
+<% else %>
+
+	<p><%= link_to "Add location", new_event_location_path(@event) %></p>
+<% end %>
+
+
