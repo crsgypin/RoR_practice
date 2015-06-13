@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+	Rails.logger.debug("logger event model")
 	validates_presence_of :name
 	has_many :attendees
 	belongs_to :category

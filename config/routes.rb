@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  Rails.logger.debug("bbevents routes")
 
   resources :people
   get "welcome/say_hello" => "welcome#say"
@@ -12,8 +13,6 @@ Rails.application.routes.draw do
     resources :attendees, :controller => 'event_attendees'
     resource :location, :controller => 'event_locations'
   end
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

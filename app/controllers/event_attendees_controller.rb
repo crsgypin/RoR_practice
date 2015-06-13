@@ -6,11 +6,11 @@ class EventAttendeesController < ApplicationController
 	end
 
 	def show
-		@attendee = @event.attendee.find(params[:id])
+		@attendee = @event.attendees.find(params[:id])
 	end
 
 	def new
-		@attendee = @event.attendee.build
+		@attendee = @event.attendees.build
 	end
 
 	def create

@@ -75,6 +75,7 @@ private
 	end
 
 	def set_event
+		Rails.logger.debug("logger controller before action")
 		@event = Event.find(params[:id])
 	end
 

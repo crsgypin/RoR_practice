@@ -9,6 +9,7 @@
 		<%= f.text_area :description, :class => "form-control" %>
 	</div>
 
+			<%=Rails.logger.debug("bbevents view")%>
 <!-- location -->
 	<%= f.fields_for :location do |location_form| %>
 	<p>
