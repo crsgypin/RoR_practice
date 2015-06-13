@@ -6,6 +6,7 @@
 </p>
 <p><%= link_to 'Latest',latest_events_path %></p>
 
+
 <table class="table table-hover">
 	<tr>
 		<th>Name </th>
@@ -29,6 +30,23 @@
 	<%= link_to 'Atom feed', events_path(:format => :atom) %>
 	<%= paginate @events %>
 	
+<!-- bulk update -->
+<%= form_tag bulk_update_events_path do %>
+<ul>
+	<% @events.each do |e| %>
+	<li>
+		<%= check_box_tag "ids[]", e.id, false %>
+		<%= e.name %>
+	</li>
+	<% end %><!-- @events.each -->
+</ul>
+<%= submit_tag "Delete" %>
+<%= submit_tag "Publish" %>
+<% end %><!-- form tag -->
+
+
+<br><br>
+<!-- image test for css -->
 <div class="gem_img">
 	<%= image_tag("gem_12.jpg") %>
 </div>

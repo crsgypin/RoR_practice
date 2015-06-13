@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resource :state, :controller => 'event_states'
     collection do
       get :latest
+      post :bulk_update
     end
   end
 
