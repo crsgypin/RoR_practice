@@ -24,6 +24,14 @@
 	<% end %>
 
 
+<!-- select for category -->
+	<%= f.collection_select(:category_id, Category.all, :id, :name) %>
+
+	<br>
+<!-- checkbox for group -->
+	<%= f.collection_check_boxes(:group_ids, Group.all, :id, :name) %>
+
+	<br>
 <!-- error check -->
 	<% if @event.errors.any? %>
 		<ul>
@@ -33,6 +41,5 @@
 		</ul>
 	<% end %>
 		
-	<%= f.collection_select(:category_id, Category.all, :id, :name) %>
 	
 

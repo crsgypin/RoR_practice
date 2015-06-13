@@ -15,4 +15,10 @@
 	<p><%= link_to "Add location", new_event_location_path(@event) %></p>
 <% end %>
 
+<p>Group:
+	<% @event.groups.each do |g| %>
+		<%= g.name %>
+	<% end %>
+</p>
+
 

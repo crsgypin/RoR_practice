@@ -8,5 +8,10 @@
 <p>Category: <%= @event.category_name %> </p>
 
 
+<p>Group:
+	<% @event.groups.each do |g| %>
+		<%= g.name %>
+	<% end %>
+</p>
 
 
