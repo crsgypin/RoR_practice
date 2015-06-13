@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :events do
     resources :attendees, :controller => 'event_attendees'
     resource :location, :controller => 'event_locations'
+    resource :state, :controller => 'event_states'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
