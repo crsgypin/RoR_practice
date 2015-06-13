@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
 #create
 	def new
-		@event = Event.new
+		@event = Event.new	
 	end
 
 	def create
@@ -76,7 +76,7 @@ private
 	end
 
 	def set_event
-		Rails.logger.debug("logger controller before action")
+		Rails.logger.debug("selflogger controller before action")
 		@event = Event.find(params[:id])
 	end
 

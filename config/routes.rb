@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  Rails.logger.debug("bbevents routes")
+  Rails.logger.debug("selflogger routes")
 
   resources :people
   get "welcome/say_hello" => "welcome#say"
