@@ -1,0 +1,19 @@
+
+
+<p>Latest: </p>
+<table>
+	<tr>
+		<td>NAME</td>
+		<td>DESCRIPTION</td>		
+	</tr>
+
+	<%@events.each do |event| %>
+	<tr>
+		<td><%=event.name%></td>
+		<td><%=event.description%></td>		
+
+	</tr>
+	<% end %>
+</table>
+
+<%=link_to 'index',events_path %>
