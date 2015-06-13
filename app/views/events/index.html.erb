@@ -53,6 +53,11 @@
 		<% end %><!-- form tag -->
 	</div>
 	<div class="col-md-6">
+		<!-- seach function -->
+		<%= form_tag events_path, :method => :get do %>
+			<%= text_field_tag "keyword"%>
+			<%= submit_tag "Search" %>
+		<% end %>
 	</div>
 </div>
 	
