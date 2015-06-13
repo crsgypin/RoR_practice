@@ -1,0 +1,8 @@
+
+
+<h1>Dashboard </h1>
+<p>Name: <%=@event.name %></p>
+<p>Description: <%= @event.description %> </p>
+
+<%= link_to "back to #{@event.name}", event_path(@event) %>
+

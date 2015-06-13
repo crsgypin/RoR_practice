@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       get :latest
       post :bulk_update
     end
+    member do
+      get :dashboard
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
