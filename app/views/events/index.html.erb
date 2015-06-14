@@ -57,6 +57,13 @@
 		<%= form_tag events_path, :method => :get do %>
 			<%= text_field_tag "keyword"%>
 			<%= submit_tag "Search" %>
+		<br>
+		
+		<!-- sort feature -->
+		<%= link_to 'sort by name', events_path(:order=>"name") %>
+		<br>
+		<%= link_to 'sort by default', events_path %>
+		<br>
 		<% end %>
 	</div>
 </div>
