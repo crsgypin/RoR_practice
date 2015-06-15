@@ -50,6 +50,7 @@ class EventsController < ApplicationController
 			# format.json { render :json => {id:@event.id, name:@event.name}.to_json}
 
 			format.html
+			format.js
 			format.json
 
 		end

@@ -28,10 +28,22 @@
 					<%= link_to 'location', event_location_path(event) %>
 					<%= link_to 'Dashboard', dashboard_event_path(event) %>
 					<%= link_to 'ajax show', event_path(event), :remote => true %>
+					<%= link_to 'ajax show json', event_path(event), :remote => true, :data =>{:type=>:json}, :class=>"ajax_update" %>
 				</td>
 			</tr>
 			<% end %>
 		</table>
+
+		<script>
+
+			$(document).ready(function(){
+				$('.ajax_update').on("ajax:success",function(event,data){
+					var event_area=$('#event_area');
+					event_area.text(data['abc']);
+				});
+			});
+
+		</script>
 
 		<%= link_to 'Atom feed', events_path(:format => :atom) %>
 		<%= paginate @events %>
