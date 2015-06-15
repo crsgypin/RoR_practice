@@ -57,7 +57,8 @@ class EventsController < ApplicationController
 			flash[:alert] = "event was successfully updated"
 			redirect_to event_url(@event)
 		else
-			render :action => :edit
+			# render :action => :edit
+			render :template => "events/edit"
 		end
 	end
 
@@ -66,7 +67,9 @@ class EventsController < ApplicationController
 		@event = Event.find(params[:id])
 		@event.destroy
 		flash[:alert] = "event was successfully deleted"
-		redirect_to :action => :index
+
+		redirect_to events_path
+
 	end
 
 	def delete
