@@ -41,9 +41,17 @@ class EventsController < ApplicationController
 		@page_title = @event.name
 
 		respond_to do |format|
-			format.html {@page_title = @event.name}
-			format.xml
-			format.json { render :json => {id:@event.id, name:@event.name}.to_json}
+
+			Rails.logger.debug("---------log goest here-------")
+			Rails.logger.debug(format.html)
+			Rails.logger.debug(format.json)
+			# format.html {@page_title = @event.name}
+			# format.xml
+			# format.json { render :json => {id:@event.id, name:@event.name}.to_json}
+
+			format.html
+			format.json
+
 		end
 
 	end

@@ -27,6 +27,7 @@
 					<%= link_to 'attendees', event_attendees_path(event) %>
 					<%= link_to 'location', event_location_path(event) %>
 					<%= link_to 'Dashboard', dashboard_event_path(event) %>
+					<%= link_to 'ajax show', event_path(event), :remote => true %>
 				</td>
 			</tr>
 			<% end %>
@@ -52,7 +53,7 @@
 		<%= submit_tag "Publish" %>
 		<% end %><!-- form tag -->
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-3">
 		<!-- seach function -->
 		<%= form_tag events_path, :method => :get do %>
 			<%= text_field_tag "keyword"%>
@@ -65,6 +66,9 @@
 		<%= link_to 'sort by default', events_path %>
 		<br>
 		<% end %>
+	</div>
+	<div class="col-md-3">
+		<div id="event_area">ppp</div>
 	</div>
 </div>
 	

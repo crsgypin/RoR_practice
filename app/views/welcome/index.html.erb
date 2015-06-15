@@ -1,4 +1,14 @@
 <p>Hola! It's <%= Time.now %></p>
-<p><%= link_to 'Hello!',welcome_say_hello_path %></p>
+<p><%= link_to 'Hello!',welcome_say_hello_path, :id=>"ajax-load" %></p>
+<div id="content" style="border: 1px solid red;"></div>
 
+<script>
+	$(document).ready(function(){
+		$('#ajax-load').click(function(){
+			$('#content').load($(this).attr("href"));
+			return false;
+		});
+	});
+
+</script>
 
