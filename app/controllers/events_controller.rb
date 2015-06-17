@@ -16,7 +16,6 @@ class EventsController < ApplicationController
 			format.xml { render :xml => @events.to_xml}
 			format.json { render :json => @events.to_json}
 			format.atom { @feed_title = "My event list"}
-
 		end
 
 	end
