@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   Rails.logger.debug("selflogger routes")
 
   resources :people
